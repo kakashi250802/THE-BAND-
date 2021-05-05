@@ -21,6 +21,9 @@ html{
 .mt-16{
     margin-top: 16px !important;
 }
+.mt-32{
+    margin-top: 32px;
+}
 .row{
     margin-left: -8px;
     margin-right: -8px;
@@ -53,6 +56,7 @@ html{
     display: inline-block;
     margin-top: 15px;
     border: none;
+    text-align: center;
 }
 .btn:hover{
     color: black;
@@ -77,7 +81,7 @@ top: 0;
 width: 100%;
 left: 0;
 z-index: 1;
-overflow: hidden;
+
 }
 #nav,.subnav{
     list-style-type: none;
@@ -226,7 +230,7 @@ display: block;
     text-align: center;
 }
 #content .member-list{
-    margin-top: 48px;
+    margin-top: 32      px;
     /* overflow: hidden; */
     /* fix lỗi bị sang mặt phẳng khác khi căn chỉnh bằng float */
 }
@@ -282,7 +286,7 @@ background: black;
     /* margin: 32px -8px 0; */
     /*có thể dùng margin bottom nhưng về ý ngĩa nên dùng padding để đệm */
     
-    margin-top: 32px;
+    margin-top: 16px;
 }
 
 .place-img{
@@ -317,6 +321,13 @@ display: block;
 }
 .contact-infor{
     font-size: 18px;
+}
+.contact-infor a{
+    color: #101aef;
+    opacity: 0.8;
+}
+.contact-infor a:hover{
+    opacity: 1;
 }
 .contact-infor i[class*="ti-"]{
     width: 30px;
@@ -365,7 +376,28 @@ display: block;
 #footer .copyright, #footer .copyright a{
     color: rgba(0, 0, 0, 0.6);
 }
-
+/* tablet & mobile */
+@media only screen and (max-width: 63.9375em)  {
+    .btn{
+        padding: 15px 16px;
+    }
+    .contact-form .form-control{
+        padding: 15px;
+    }
+    .socials-list{
+        font-size: 48px;
+        margin: 0 8px;
+    }
+    #footer .copyright a{
+        padding: 12px 0;
+    }
+    #nav .subnav a{
+        padding: 5px 12px;
+    }
+    .contact-infor{
+        line-height: 2;
+    }
+}
 /* mobile with< 740px  */
 @media only screen and (max-width: 46.1875em) {
     #nav >li {
@@ -378,14 +410,46 @@ display: block;
     #nav{
         display: block;
     }
+    #nav li a{
+        padding: 1px 24px;
+    }
+    #nav .subnav{
+        position: initial;
+        background: #333;
+
+    }
+    #nav .subnav a{
+        color: #fff;
+        padding: 5px 41px;
+    }
     #header .mobile-menu-btn{
         display: block;
     }
     #nav >li:first-child{
         display: inline-block;
     }
+    #header{
+        overflow: hidden;
+    }
+    #content .member-img{
+        width: 60%;
+    }
+    .place-list{
+
+    }
+    .s-ful-width,
+    .s-col-ful{
+        width: 100% !important;
+    }
+    .s-mt-8{
+        margin-top: 8px;
+    }
+    
+    .contact-form{
+        margin-top: 32px;
+    }
 }
 /* tablet width >=740px width <1024px */
 @media only screen and (min-width:46.25em) and (max-width:63.9375em) {
- 
+
 }
